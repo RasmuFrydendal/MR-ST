@@ -12,15 +12,15 @@ namespace SpaceTaxi_1
     {
         public Entity Entity { get; private set; }
         private readonly DynamicShape shape;
-        private readonly MediaTypeNames.Image _taxiBoosterOffImageLeft;
-        private readonly MediaTypeNames.Image _taxiBoosterOffImageRight;
+        private readonly Image _taxiBoosterOffImageLeft;
+        private readonly Image _taxiBoosterOffImageRight;
         private Orientation _taxiOrientation;
 
         public Player()
         {
             shape = new DynamicShape(new Vec2F(), new Vec2F());
-            _taxiBoosterOffImageLeft = new MediaTypeNames.Image(Path.Combine("Assets", "Images", "Taxi_Thrust_None.png"));
-            _taxiBoosterOffImageRight = new MediaTypeNames.Image(Path.Combine("Assets", "Images", "Taxi_Thrust_None_Right.png"));
+            _taxiBoosterOffImageLeft = new Image(Path.Combine("Assets", "Images", "Taxi_Thrust_None.png"));
+            _taxiBoosterOffImageRight = new Image(Path.Combine("Assets", "Images", "Taxi_Thrust_None_Right.png"));
 
             Entity = new Entity(shape, _taxiBoosterOffImageLeft);
         }

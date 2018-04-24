@@ -23,7 +23,7 @@ namespace SpaceTaxi_1
         public Game()
         {
             // window
-            _win = new VisualStyleElement.Window("Space Taxi Game v0.1", 500, AspectRatio.R1X1);
+            _win = new Window("Space Taxi Game v0.1", 500, AspectRatio.R1X1);
 
             // event bus
             _eventBus = new GameEventBus<object>();
