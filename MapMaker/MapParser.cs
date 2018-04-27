@@ -26,7 +26,6 @@ namespace SpaceTaxi_1.MapMaker {
             string metaDataString = "";
             string pattern = @"\s*(?<header>";
             
-            
             foreach (var header in parserHeaders) {
                 pattern += header+"|";
             }
@@ -62,10 +61,10 @@ namespace SpaceTaxi_1.MapMaker {
                 line = sr.ReadLine();
             }
 
-            KeyParser.ParseKey(keyString);
-            Metaparser.Parse(metaDataString);
-            ASCIIParser.MapFromAASCII(mapString, KeyParser.ParseKey(keyString), List<string> platforms);
-            return new Map();
+            Dictionary<string,string> keyMap = KeyParser.ParseKey(keyString);
+            Metaparser.Parser(metaDataString);
+            ASCIIParser.Parser(mapString, keyMap , List<string> platforms);
+            return new Map(ASCIIParser.Parser(mapString, KeyParser.ParseKey(keyString), List<string> platforms));
         }
 
     }

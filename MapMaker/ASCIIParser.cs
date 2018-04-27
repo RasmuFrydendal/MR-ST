@@ -8,7 +8,7 @@ using DIKUArcade.Math;
 namespace SpaceTaxi_1.MapMaker {
     public class ASCIIParser {
 
-        public static EntityContainer<Entity> MapFromAASCII (String mapString, Dictionary<string,string> keymap, List<string> platforms) {
+        public static EntityContainer<Entity> Parser (String mapString, Dictionary<string,string> keymap, List<string> platforms) {
 
             EntityContainer returnContainer = new EntityContainer();
 

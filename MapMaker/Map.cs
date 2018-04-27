@@ -7,5 +7,9 @@ namespace SpaceTaxi_1.MapMaker {
         private string Name;
         private List<string> platforms;
 
+        public Map(string metaData) {
+            Name = name;
+        }
+
     }
 }
