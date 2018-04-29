@@ -1,3 +1,6 @@
+
+##Map##
+
 CTTTTTTTTTTTTTTTTD^^^^^^CTTTTTTTTTTTTttt
 A                                    stt
 A                                      B
@@ -22,8 +25,12 @@ A     gef         gef       a          B
 MMMMMMMeMMMMMMMMMMMeMMMMMMMMaMMMMMMMMMMM
 OOOOSSSeSSSSSSSSSSSeSSSSSSSOaOOOOOOOOOOO
 
+##MetaData##
+
 Name: THE BEACH
 Platforms: J, i, r
+
+##KeyMap##
 
 A) aspargus-edge-left.png
 B) aspargus-edge-right.png

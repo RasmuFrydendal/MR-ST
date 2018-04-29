@@ -6,19 +6,25 @@ using DIKUArcade.Entities;
 
 namespace SpaceTaxi_1.MapMaker {
     public class Map : EntityContainer {
-        public string Name { get; }
-        public List<string> Platforms { get; }
+        public string Name { get; private set; }
+        public List<string> Platforms { get; private set; }
         
         public Map(string metaData) {
-            Name = Regex.Match(metaData, @"Name:\s+(?<name>.+)$").Result("name");
+            
+            Match match = Regex.Match(metaData, @"Name:\s+(?<name>.+)$");
+
+            Name = match.Success ? match.Groups["name"].Value : "";
             Platforms = new List<string>();
-            foreach (Match match in Regex.Matches(metaData, @"Platform:(?:,*\s+(?<platform>.))*$")) {
-                Platforms.Add(match.Result("platform"));
+
+            MatchCollection matches = Regex.Matches(metaData, @"Platforms:(?:,*\s+(?<platform>.))*$");
+
+            foreach (Match mtch in matches ) {
+                Platforms.Add(mtch.Result("platform"));
             }
             
         }
 
-        public void AddEntityContainer(EntityContainer<Entity> entityContainter) {
+        public void AddEntityContainer(EntityContainer entityContainter) {
             foreach (Entity entity in entityContainter) {
                 AddStationaryEntity(entity.Shape.AsStationaryShape(),entity.Image);
             }

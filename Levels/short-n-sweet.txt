@@ -1,3 +1,6 @@
+
+##Map##
+ 
 %#%#%#%#%#%#%#%#%#^^^^^^%#%#%#%#%#%#%#%#
 #               JW      JW             %
 %      h2g                             #
@@ -22,8 +25,14 @@
 #         m1111111111111n              %
 %#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 
+
+##MetaData##
+
 Name: SHORT -N- SWEET
 Platforms: 1
+
+
+##KeyMap##
 
 %) white-square.png
 #) ironstone-square.png

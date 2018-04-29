@@ -18,3 +18,15 @@
 /Users/anders1991/Desktop/exercise-8/SpaceTaxi-1/obj/Debug/SpaceTaxi-1.csproj.CoreCompileInputs.cache
 /Users/anders1991/Desktop/exercise-8/SpaceTaxi-1/obj/Debug/SpaceTaxi-1.exe
 /Users/anders1991/Desktop/exercise-8/SpaceTaxi-1/obj/Debug/SpaceTaxi-1.pdb
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\bin\Debug\SpaceTaxi-1.exe.config
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\bin\Debug\SpaceTaxi-1.exe
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\bin\Debug\SpaceTaxi-1.pdb
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\bin\Debug\DIKUArcade.dll
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\bin\Debug\OpenTK.dll
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\bin\Debug\DIKUArcade.pdb
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\bin\Debug\OpenTK.xml
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\obj\Debug\SpaceTaxi-1.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\obj\Debug\SpaceTaxi-1.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\obj\Debug\SpaceTaxi-1.csproj.CopyComplete
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\obj\Debug\SpaceTaxi-1.exe
+C:\Users\User\Documents\SU\Space_Taxi\MR-ST\obj\Debug\SpaceTaxi-1.pdb

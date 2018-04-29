@@ -16,13 +16,18 @@ namespace SpaceTaxi_1.MapMaker {
               "KeyMap",
               "MetaData"
             };
-        
+
+
+        public static string RandomParser()
+        {
+            return "";
+        }
         
         public static Map Parser(StreamReader sr) {
             
             string headerName= "";
            
-            string keyString = "";
+            List<string> keyString = new List<string>();
             string metaDataString = "";
             List<string> mapStrings = new List<string>();
             
@@ -30,27 +35,27 @@ namespace SpaceTaxi_1.MapMaker {
             foreach (var header in MapParser.parserHeaders) {
                 pattern += header+"|";
             }
-            pattern.Remove(pattern.Length - 1);
-            pattern += @")##\s*$";
+            pattern = pattern.Remove(pattern.Length - 1);
+            pattern += @"))##\s*$";
             
             MapParser.regex = new Regex(pattern);
             
             string line = sr.ReadLine();
 
             
-            while (line != null) {
+            while (!sr.EndOfStream) {
 
                 Match match = MapParser.regex.Match(line);
                 
                 if (match.Success) {
-                    headerName = match.Result("header") ;
+                    headerName = match.Groups["header"].Value;
                 } else {
                     switch (headerName) {
                         case "Map":
                             mapStrings.Add(line); 
                             break;
-                        case "Key":
-                            keyString += line;
+                        case "KeyMap":
+                            keyString.Add(line);
                             break;
                         case "MetaData":
                             metaDataString += line;
@@ -61,8 +66,8 @@ namespace SpaceTaxi_1.MapMaker {
                 }
                 line = sr.ReadLine();
             }
-
-            Map map = new Map(MetaParser.Parser(metaDataString));
+            sr.Close();
+            Map map = new Map(metaDataString);
             Dictionary<string,string> keyMap = KeyParser.ParseKey(keyString);
             map.AddEntityContainer(ASCIIParser.Parser(mapStrings, keyMap , map.Platforms));
             return map;

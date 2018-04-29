@@ -9,32 +9,30 @@ using DIKUArcade.Math;
 namespace SpaceTaxi_1.MapMaker {
     public class ASCIIParser {
 
-        public static EntityContainer<Entity> Parser (List<string> mapStrings, Dictionary<string,string> keymap, List<string> platforms) {
+        public static EntityContainer Parser (List<string> mapStrings, Dictionary<string,string> keymap, List<string> platforms) {
 
             EntityContainer returnContainer = new EntityContainer();
-
-
+            
             List<string> map = ASCIIParser.RemoveEmptyLines(mapStrings);
             
-            int row = 0;
+            int row = 1;
             int col = 0;
             
+            float tileHeight = 1.0f / map.Count ;
+
             foreach (string line in map) {
+                float tileWidth = 1.0f / line.Length;
                 foreach (char key in line) {
                     if (keymap.ContainsKey(key.ToString())) {
-                        returnContainer.AddStationaryEntity(new StationaryShape(new Vec2F(col,row),new Vec2F(col,row)), new Image(keymap[key.ToString()] ));   
+                        returnContainer.AddStationaryEntity(new StationaryShape(new Vec2F(col*tileWidth, 1.0f - row*tileHeight), new Vec2F(tileWidth, tileHeight)), new Image(keymap[key.ToString()] ));   
                     }
-                    row++;
+                    col++;
                 }
-
-                row = 0;
-                col++;
-
-
-
+                row++;
+                col = 0;
             }
-            
-            return new EntityContainer<Entity>();
+
+            return returnContainer;
         }
 
 
@@ -42,6 +40,8 @@ namespace SpaceTaxi_1.MapMaker {
 
             Regex emptyLineRegex = new Regex(@"^\s*$");
 
+            //check for null fuldeboi
+            
             int start = 0;
             int end = inputList.Count-1;
 

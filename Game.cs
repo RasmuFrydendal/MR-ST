@@ -8,6 +8,7 @@ using DIKUArcade.EventBus;
 using DIKUArcade.Graphics;
 using DIKUArcade.Math;
 using DIKUArcade.Timers;
+using SpaceTaxi_1.MapMaker;
 
 namespace SpaceTaxi_1
 {
@@ -19,6 +20,8 @@ namespace SpaceTaxi_1
 
         private Entity _backGroundImage;
         private Player _player;
+        //SplattStuff
+        private List<Map> maps;
 
         public Game()
         {
@@ -43,6 +46,10 @@ namespace SpaceTaxi_1
                 new Image(Path.Combine("Assets", "Images", "SpaceBackground.png"))
             );
             _backGroundImage.RenderEntity();
+
+            //SplattStuff
+            maps = MapMaker.MapMaker.Maps(new List<String>() { "short-n-sweet", "the-beach" });
+            maps[0].RenderEntities();
 
             // game entities
             _player = new Player();
@@ -70,7 +77,11 @@ namespace SpaceTaxi_1
                 if (_gameTimer.ShouldRender())
                 {
                     _win.Clear();
+                    //SplattStuff
+
+
                     _backGroundImage.RenderEntity();
+                    maps[0].RenderEntities();
                     _player.RenderPlayer();
                    
                     _win.SwapBuffers();

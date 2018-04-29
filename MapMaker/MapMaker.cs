@@ -17,7 +17,7 @@ namespace SpaceTaxi_1.MapMaker {
             
             foreach (string name in names) {
                 
-                mapFile = new StreamReader(name+".txt");
+                mapFile = new StreamReader(@"..\..\Levels\" + name +".txt");
 
                 Map map = MapParser.Parser(mapFile);                
                 
