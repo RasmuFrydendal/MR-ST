@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text.RegularExpressions;
 using DIKUArcade.Entities;
 using DIKUArcade.Graphics;
@@ -8,42 +9,50 @@ using DIKUArcade.Math;
 namespace SpaceTaxi_1.MapMaker {
     public class ASCIIParser {
 
-        public static EntityContainer<Entity> Parser (String mapString, Dictionary<string,string> keymap, List<string> platforms) {
+        public static EntityContainer<Entity> Parser (List<string> mapStrings, Dictionary<string,string> keymap, List<string> platforms) {
 
             EntityContainer returnContainer = new EntityContainer();
 
-            Regex rx = new Regex();
-            
-            
-            foreach (char ASCII in mapString) {
-                string key = ASCII.ToString();
-                
-                if (keymap.ContainsKey(key)) {
-                    
-                    returnContainer.AddStationaryEntity(new StationaryShape(new Vec2F(2.0f,2.0f),new Vec2F(2.0f,2.0f)), new Image(keymap[key] ));
-                    
-                }
-                
-                //Increment row and collum here
-            
-                
-//                while (line != null && MapParser.blankLine.Match(line).Success) {
-//                    line = sr.ReadLine();
-//                }
-//            
-//                while(line !=null) {
-//                    foreach (var tile in line) {
-//                        map.AddStationaryEntity();
-//                    }
-//                    line = sr.ReadLine();
-//                }
 
-                
-                
-                
+            List<string> map = ASCIIParser.RemoveEmptyLines(mapStrings);
+            
+            int row = 0;
+            int col = 0;
+            
+            foreach (string line in map) {
+                foreach (char key in line) {
+                    if (keymap.ContainsKey(key.ToString())) {
+                        returnContainer.AddStationaryEntity(new StationaryShape(new Vec2F(col,row),new Vec2F(col,row)), new Image(keymap[key.ToString()] ));   
+                    }
+                    row++;
+                }
+
+                row = 0;
+                col++;
+
+
+
             }
             
             return new EntityContainer<Entity>();
+        }
+
+
+        private static List<string> RemoveEmptyLines(List<string> inputList) {
+
+            Regex emptyLineRegex = new Regex(@"^\s*$");
+
+            int start = 0;
+            int end = inputList.Count-1;
+
+            while (emptyLineRegex.Match(inputList[start]).Success) {
+                start++;
+            }
+            while (emptyLineRegex.Match(inputList[end]).Success) {
+                end--;
+            }
+
+            return inputList.GetRange(start,end);
         }
 
 

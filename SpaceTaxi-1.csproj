@@ -48,7 +48,7 @@
     <Compile Include="MapMaker\Map.cs" />
     <Compile Include="MapMaker\MapMaker.cs" />
     <Compile Include="MapMaker\MapParser.cs" />
-    <Compile Include="MapMaker\Metaparser.cs" />
+    <Compile Include="MapMaker\MetaParser.cs" />
     <Compile Include="Orientation.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

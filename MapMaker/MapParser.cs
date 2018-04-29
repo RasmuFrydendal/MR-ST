@@ -11,32 +11,33 @@ namespace SpaceTaxi_1.MapMaker {
 
         private static Regex regex;
         
-        private static Regex blankLine = new Regex(@"\s*");
-
         private static List<string> parserHeaders = new List<string> 
             { "Map",
-              "Key",
-              "MetaData"};
+              "KeyMap",
+              "MetaData"
+            };
+        
         
         public static Map Parser(StreamReader sr) {
-
-            string headerName="";
-            string mapString = "";
+            
+            string headerName= "";
+           
             string keyString = "";
             string metaDataString = "";
-            string pattern = @"\s*(?<header>";
+            List<string> mapStrings = new List<string>();
             
-            foreach (var header in parserHeaders) {
+            string pattern = @"\s*##(?<header>(";
+            foreach (var header in MapParser.parserHeaders) {
                 pattern += header+"|";
             }
-
             pattern.Remove(pattern.Length - 1);
-            pattern += @")\s*$";
+            pattern += @")##\s*$";
             
             MapParser.regex = new Regex(pattern);
             
             string line = sr.ReadLine();
 
+            
             while (line != null) {
 
                 Match match = MapParser.regex.Match(line);
@@ -46,7 +47,7 @@ namespace SpaceTaxi_1.MapMaker {
                 } else {
                     switch (headerName) {
                         case "Map":
-                            mapString += line;
+                            mapStrings.Add(line); 
                             break;
                         case "Key":
                             keyString += line;
@@ -61,10 +62,10 @@ namespace SpaceTaxi_1.MapMaker {
                 line = sr.ReadLine();
             }
 
+            Map map = new Map(MetaParser.Parser(metaDataString));
             Dictionary<string,string> keyMap = KeyParser.ParseKey(keyString);
-            Metaparser.Parser(metaDataString);
-            ASCIIParser.Parser(mapString, keyMap , List<string> platforms);
-            return new Map(ASCIIParser.Parser(mapString, KeyParser.ParseKey(keyString), List<string> platforms));
+            map.AddEntityContainer(ASCIIParser.Parser(mapStrings, keyMap , map.Platforms));
+            return map;
         }
 
     }
