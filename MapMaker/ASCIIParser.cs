@@ -33,7 +33,10 @@ namespace SpaceTaxi_1.MapMaker {
                 float tileWidth = 1.0f / line.Length;
                 foreach (char key in line) {
                     if (keymap.ContainsKey(key.ToString())) {
-                        returnContainer.AddStationaryEntity(new StationaryShape(new Vec2F(col*tileWidth, 1.0f - row*tileHeight), new Vec2F(tileWidth, tileHeight)), new Image(keymap[key.ToString()] ));   
+                        returnContainer.AddStationaryEntity(
+                            new StationaryShape(new Vec2F(col*tileWidth, 1.0f - row*tileHeight), 
+                                                new Vec2F(tileWidth, tileHeight)), 
+                                                new Image(keymap[key.ToString()] ));   
                     }
                     col++;
                 }

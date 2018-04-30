@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace SpaceTaxi_1.MapMaker {
@@ -22,9 +23,13 @@ namespace SpaceTaxi_1.MapMaker {
             foreach (string line in keys)
             {
                 match = rx.Match(line);
-                if (match.Success) {             
-                    keyMap.Add(match.Groups["ASCII"].Value,"Assets\\Images\\"+ match.Groups["name"].Value);
-                    //match.NextMatch();
+                if (match.Success) {
+                    string path = "Assets\\Images\\" + match.Groups["name"].Value;
+                    if (!File.Exists(path))
+                    {
+                        path = "Assets/Images/" + match.Groups["name"].Value;
+                    }
+                    keyMap.Add(match.Groups["ASCII"].Value,path);
                 }
             }
             return keyMap;
