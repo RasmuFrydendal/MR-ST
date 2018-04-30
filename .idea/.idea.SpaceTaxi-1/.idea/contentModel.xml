@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\User\.Rider2018.1\System\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SpaceTaxi-1.1119040386.00" t="ExcludeRecursive" />
-    <e p="C:\Users\User\Documents\SU\Space_Taxi\MR-ST" t="IncludeRecursive">
+    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_SpaceTaxi-1.1782967130.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="App.config" t="Include" />
-      <e p="bin" t="ExcludeRecursive" />
-      <e p="DIKUArcade\DIKUArcade" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
+      <e p="DIKUArcade/DIKUArcade" t="IncludeRecursive">
         <e p="DIKUArcade.csproj" t="IncludeRecursive" />
         <e p="Entities" t="Include">
           <e p="DynamicShape.cs" t="Include" />
@@ -48,9 +46,7 @@
           <e p="Vec4F.cs" t="Include" />
           <e p="Vec4I.cs" t="Include" />
         </e>
-        <e p="obj" t="ExcludeRecursive" />
         <e p="OpenTK.dll.config" t="Include" />
-        <e p="packages.config" t="Include" />
         <e p="Physics" t="Include">
           <e p="CollisionData.cs" t="Include" />
           <e p="CollisionDetection.cs" t="Include" />
@@ -71,6 +67,9 @@
           <e p="RandomGenerator.cs" t="Include" />
         </e>
         <e p="Window.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="Game.cs" t="Include" />
       <e p="MapMaker" t="Include">
@@ -79,11 +78,9 @@
         <e p="Map.cs" t="Include" />
         <e p="MapMaker.cs" t="Include" />
         <e p="MapParser.cs" t="Include" />
-        <e p="Metaparser.cs" t="Include" />
+        <e p="MetaParser.cs" t="Include" />
       </e>
-      <e p="obj" t="ExcludeRecursive" />
       <e p="Orientation.cs" t="Include" />
-      <e p="packages" t="ExcludeRecursive" />
       <e p="Player.cs" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
@@ -91,6 +88,9 @@
       </e>
       <e p="SpaceTaxi-1.csproj" t="IncludeRecursive" />
       <e p="SpaceTaxi-1.sln" t="IncludeFlat" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
