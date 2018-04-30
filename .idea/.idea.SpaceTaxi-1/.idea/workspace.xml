@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="320e1ea9-4d70-4079-acf8-4e7ab870ff86" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceTaxi-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceTaxi-1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DIKUArcade" beforeDir="false" afterPath="$PROJECT_DIR$/DIKUArcade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DIKUArcade/DIKUArcade/DIKUArcade.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DIKUArcade/DIKUArcade/DIKUArcade.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DIKUArcade/DIKUArcade/OpenTK.dll.config" beforeDir="false" afterPath="$PROJECT_DIR$/DIKUArcade/DIKUArcade/OpenTK.dll.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DIKUArcade/DIKUArcade/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/DIKUArcade/DIKUArcade/packages.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapMaker/MapMaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapMaker/MapMaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/DIKUArcade.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/DIKUArcade.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/DIKUArcade.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/DIKUArcade.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/SpaceTaxi-1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/SpaceTaxi-1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/SpaceTaxi-1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/SpaceTaxi-1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SpaceTaxi-1.csprojResolveAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SpaceTaxi-1.csprojResolveAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SpaceTaxi-1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SpaceTaxi-1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SpaceTaxi-1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SpaceTaxi-1.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +27,8 @@
       <file leaf-file-name="MapMaker.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MapMaker/MapMaker.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+            <state relative-caret-position="240">
+              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
               <folding>
                 <marker date="1525089356208" expanded="false" signature="6:109" ph="..." />
                 <marker date="1525089356208" expanded="true" signature="142:863" ph="{...}" />
@@ -309,18 +316,18 @@
   </component>
   <component name="RunManager">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/bin/Debug/SpaceTaxi-1.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bin/Debug" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
-      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/SpaceTaxi-1.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="None" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.5" />
     </configuration>
   </component>
   <component name="StructureViewFactory">
@@ -348,12 +355,12 @@
       <workItem from="1525006857966" duration="10964000" />
       <workItem from="1525020268135" duration="2748000" />
       <workItem from="1525023075763" duration="381000" />
-      <workItem from="1525088712677" duration="640000" />
+      <workItem from="1525088712677" duration="748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49392000" />
+    <option name="totallyTimeSpent" value="49500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,19 +373,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32905984" />
       <window_info anchor="right" id="Errors In Solution" order="3" weight="0.3295302" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="14" sideWeight="0.50067115" side_tool="true" visible="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50067115" side_tool="true" visible="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Unit Tests" order="9" weight="0.32905984" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49932885" weight="0.32905984" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32905984" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.15384616" />
       <window_info anchor="bottom" id="NuGet" order="12" weight="0.32905984" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="1" sideWeight="0.49932885" weight="0.32905984" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
@@ -389,7 +396,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="1" sideWeight="0.49932885" visible="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Find" order="3" visible="true" weight="0.32905984" />
     </layout>
   </component>
@@ -991,8 +997,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MapMaker/MapMaker.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+        <state relative-caret-position="240">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
           <folding>
             <marker date="1525089356208" expanded="false" signature="6:109" ph="..." />
             <marker date="1525089356208" expanded="true" signature="142:863" ph="{...}" />
