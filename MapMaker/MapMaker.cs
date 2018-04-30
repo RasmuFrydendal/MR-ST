@@ -10,6 +10,8 @@ namespace SpaceTaxi_1.MapMaker {
         
         public static List<Map> Maps(List<string> names) {
 
+            var dir = new DirectoryInfo(Path.GetDirectoryName(
+                System.Reflection.Assembly.GetExecutingAssembly().Location));
 
             List<Map> maps = new List<Map>();
 
@@ -17,7 +19,7 @@ namespace SpaceTaxi_1.MapMaker {
             
             foreach (string name in names) {
                 
-                mapFile = new StreamReader(@"..\..\Levels\" + name +".txt");
+                mapFile = new StreamReader(dir.FullName.ToString() + name +".txt");
 
                 Map map = MapParser.Parser(mapFile);                
                 
