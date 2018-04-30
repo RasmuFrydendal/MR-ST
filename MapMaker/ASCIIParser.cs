@@ -9,6 +9,15 @@ using DIKUArcade.Math;
 namespace SpaceTaxi_1.MapMaker {
     public class ASCIIParser {
 
+
+        /// <summary>
+        /// Parser creates a container of Map entities
+        /// </summary>
+        /// <param name="mapStrings"></param>
+        /// <param name="keymap"></param>
+        /// <param name="platforms"></param>
+        /// <returns></returns>
+
         public static EntityContainer Parser (List<string> mapStrings, Dictionary<string,string> keymap, List<string> platforms) {
 
             EntityContainer returnContainer = new EntityContainer();
@@ -35,6 +44,11 @@ namespace SpaceTaxi_1.MapMaker {
             return returnContainer;
         }
 
+        /// <summary>
+        /// Removes empty lines at the start and end of the string 
+        /// </summary>
+        /// <param name="inputList"></param>
+        /// <returns></returns>
 
         private static List<string> RemoveEmptyLines(List<string> inputList) {
 

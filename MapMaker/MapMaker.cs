@@ -18,8 +18,21 @@ namespace SpaceTaxi_1.MapMaker {
             StreamReader mapFile;
             
             foreach (string name in names) {
+
+
+                string path = "../../Levels/" + name + ".txt";
+
                 
-                mapFile = new StreamReader( "../../Levels/" + name +".txt");
+                if (!File.Exists(path))
+                {
+                    path = "..\\..\\Levels\\" + name + ".txt";
+                }
+                if (!File.Exists(path))
+                {
+                    throw new FileNotFoundException($"Error: The file \"{path}\" does not exist.");
+                }
+                
+                mapFile = new StreamReader("../../Levels/" + name + ".txt");
 
                 Map map = MapParser.Parser(mapFile);                
                 

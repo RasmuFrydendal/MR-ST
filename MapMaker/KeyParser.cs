@@ -4,7 +4,12 @@ using System.Text.RegularExpressions;
 namespace SpaceTaxi_1.MapMaker {
     public static class KeyParser {
 
-        //should be done!
+        
+        /// <summary>
+        /// Creates a Dictionary matching a char with a filename.
+        /// </summary>
+        /// <param name="keys"></param>
+        /// <returns></returns>
         
         public static Dictionary<string, string> ParseKey(List<string> keys) {
 
